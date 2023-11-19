@@ -33,9 +33,12 @@ public class SpringSecurityApplication {
 	
 	
 	private void updateStudent(StudentDAO studentDAO) {
-	
-		
-		
+		int studentId = 1;
+		Student std = studentDAO.findById(studentId);
+		System.out.println("Student without Updation : " + std);
+		std.setFirstName("Scooby");
+		studentDAO.update(std);
+		System.out.println("Updated Student : " + std);
 	}
 	
 	
