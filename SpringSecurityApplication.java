@@ -27,10 +27,16 @@ public class SpringSecurityApplication {
 			//displayRetrivedObject(studentDAO);
 			//queryForStudents(studentDAO);
 			//queryToFindStudentByLastName(studentDAO);
-			updateStudent(studentDAO);
+			//updateStudent(studentDAO);
+			deleteStudent(studentDAO);
 		};
 	}
 	
+	private void deleteStudent(StudentDAO studentDAO) {
+		int stdId = 7;
+		studentDAO.delete(stdId);
+		return;
+	}
 	
 	private void updateStudent(StudentDAO studentDAO) {
 		int studentId = 1;
